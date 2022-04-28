@@ -30,7 +30,22 @@ class Counter extends Component {
           onClick={() => {
             // this.setState를 사용하여, 새로운 값을 넣을 수 있습니다.
             // 인자로 전달된 객체 안에 들어 있는 값만 바꾸어 준다.
-            this.setState({ number: number + 1 });
+            // this.setState({ number: number + 1 });
+            this.setState((prevState) => {
+              return {
+                //업데이트 하고 싶은 내용
+                number: prevState.number + 1,
+              };
+            });
+
+            this.setState(
+              (prevState) => ({
+                number: prevState.number + 1,
+              }),
+              () => {
+                console.log("방금 함수가 호출되었습니다.");
+              }
+            );
           }}
         >
           +1

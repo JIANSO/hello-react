@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import MyComponent from "./MyComponent";
 import Counter from "./Counter";
+import Say from "./Say";
+import EventPractice from "./EventPractice";
 
 class App1 extends Component {
   // 이후 배울 state 기능 및 라이프사이클 기능을 사용할 수 있음
@@ -21,8 +23,12 @@ const App2 = () => {
   );
 };
 
-const App = () => {
-  return <Counter />;
+const App3 = () => {
+  return <Say />;
 };
 
-export default App;
+const App4 = () => {
+  return <EventPractice />;
+};
+
+export default App4;
